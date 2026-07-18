@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymProgress.Application\GymProgress.Application.csproj" />
+    <ProjectReference Include="..\GymProgress.Infrastructure\GymProgress.Infrastructure.csproj" />
+    <ProjectReference Include="..\GymProgress.Persistence\GymProgress.Persistence.csproj" />
+    <ProjectReference Include="..\GymProgress.Domain\GymProgress.Domain.csproj" />
+    <ProjectReference Include="..\GymProgress.Shared\GymProgress.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

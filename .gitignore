@@ -1,0 +1,25 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## Rider / VS / VS Code
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+
+## Secrets - never commit real connection strings or JWT secrets
+appsettings.Production.json
+*.pfx
+
+## OS
+.DS_Store
+Thumbs.db

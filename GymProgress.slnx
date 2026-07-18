@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GymProgress.API/GymProgress.API.csproj" />
+    <Project Path="src/GymProgress.Application/GymProgress.Application.csproj" />
+    <Project Path="src/GymProgress.Domain/GymProgress.Domain.csproj" />
+    <Project Path="src/GymProgress.Infrastructure/GymProgress.Infrastructure.csproj" />
+    <Project Path="src/GymProgress.Persistence/GymProgress.Persistence.csproj" />
+    <Project Path="src/GymProgress.Shared/GymProgress.Shared.csproj" />
+  </Folder>
+</Solution>
