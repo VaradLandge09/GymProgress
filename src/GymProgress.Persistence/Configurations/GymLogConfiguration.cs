@@ -28,8 +28,7 @@ namespace GymProgress.Persistence.Configurations
                 .HasMaxLength(500);
 
             builder.Property(gl => gl.CreatedAt)
-                .IsRequired()
-                .HasDefaultValueSql("GETUTCDATE()");
+                .IsRequired();
 
             // Foreign key -> Users
             builder.HasOne(gl => gl.User)

@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// GymProgress.Application/Validators/UpdateProfileRequestValidator.cs
+using FluentValidation;
+using GymProgress.Application.DTOs.Profile;
 
-namespace GymProgress.Application.Validators
+public class UpdateProfileRequestValidator : AbstractValidator<UpdateProfileRequestDto>
 {
-    public class UpdateProfileRequestValidator
+    public UpdateProfileRequestValidator()
     {
-        // To be implemented
+        RuleFor(x => x.Username)
+            .MaximumLength(50).WithMessage("Username can't exceed 50 characters.")
+            .When(x => x.Username is not null);
     }
 }

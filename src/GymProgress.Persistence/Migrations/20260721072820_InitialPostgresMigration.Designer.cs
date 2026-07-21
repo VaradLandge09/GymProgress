@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GymProgress.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260718164015_InitialPostgresMigration")]
+    [Migration("20260721072820_InitialPostgresMigration")]
     partial class InitialPostgresMigration
     {
         /// <inheritdoc />
@@ -84,9 +84,7 @@ namespace GymProgress.Persistence.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("DayTypeId")
                         .HasColumnType("integer");

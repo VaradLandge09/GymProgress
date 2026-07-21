@@ -69,7 +69,7 @@ namespace GymProgress.Persistence.Migrations
                     LogDate = table.Column<DateOnly>(type: "date", nullable: false),
                     DayTypeId = table.Column<int>(type: "integer", nullable: false),
                     Notes = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValueSql: "GETUTCDATE()"),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
